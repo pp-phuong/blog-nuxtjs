@@ -1,12 +1,10 @@
 <template>
   <div>
     <HomeHeader />
-    <b-container>
-      <b-row>
-        <b-col xl="8" md="8" sm="12"><HomeFeaturePosts /></b-col>
-        <b-col xl="4" md="4" sm="12"><HomeSidebar /></b-col>
-      </b-row>
-    </b-container>
+    <div class="p-10 d-flex flex-md-row flex-sm-column">
+      <b-col xl="8" md="8" sm="12"><HomeFeaturePosts /></b-col>
+      <b-col xl="4" md="4" sm="12"><HomeSidebar /></b-col>
+    </div>
   </div>
 </template>
 <script>

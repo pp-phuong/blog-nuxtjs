@@ -1,21 +1,16 @@
 <template>
   <div class="align-items-center">
     <div>
-      <h2 class="name text-center text-primary p-5">
-        Color's Blog
-      </h2>
-    </div>
-    <div>
       <b-carousel
         id="carousel-1"
         v-model="slide"
-        :interval="4000"
+        :interval="2000"
         controls
-        indicators
-        background="#ababab"
+        fade
+        background="#111111"
         img-width="1024"
-        img-height="300"
-        style="text-shadow: 1px 1px 2px #333;"
+        img-height="280"
+        style="text-shadow: 1px 1px 2px #333; position: relative;"
         @sliding-start="onSlideStart"
         @sliding-end="onSlideEnd"
       >
@@ -24,11 +19,12 @@
           v-for="(item, index) in data"
           :key="'home-header-carousel' + index"
           :img-src="item.thumbnail"
-          class="img-carousel"
           style="height: 500px;"
         >
-          <h3>{{ item.title }}</h3>
-          <p>{{ item.description }}</p>
+          <div class="carousel-post">
+            <h3>{{ item.title }}</h3>
+            <b>{{ item.author }}</b>
+          </div>
         </b-carousel-slide>
       </b-carousel>
     </div>
@@ -44,24 +40,21 @@ export default {
         return [
           {
             thumbnail:
-              'https://image.freepik.com/free-vector/fashion-lookbook-brochure-template_123371-23.jpg',
-            title: 'Travel Images',
-            description:
-              'We have a great selection of travel images and travel pictures to choose from and download. Our travel photos consists of images taken by our photographers during travel photography shoots as well as images of means of travel like trains, planes, cars or hiking.',
+              'https://i.pinimg.com/564x/25/27/9f/25279fc50647327045b7e4a9f5aa6a96.jpg',
+            title: 'Jisoo  Korea Photoshoot & Interview',
+            author: 'George Steven',
           },
           {
             thumbnail:
-              'https://www.creativefabrica.com/wp-content/uploads/2020/04/11/Fashion-Lookbook-Powerpoint-Template-Graphics-3849150-2-580x387.jpg',
-            title: 'Travel Images',
-            description:
-              'We have a great selection of travel images and travel pictures to choose from and download. Our travel photos consists of images taken by our photographers during travel photography shoots as well as images of means of travel like trains, planes, cars or hiking.',
+              'https://starbiz.net/wp-content/uploads/2020/06/blackpink-jisoo-incredible-beauty-on-elle-korea-magazine-july-2020-issue.jpg',
+            title: 'Jisoo is a South Korean actress',
+            author: 'Hana Dens',
           },
           {
             thumbnail:
-              'https://images.creativemarket.com/0.1.0/ps/3773492/580/386/m1/fpnw/wm0/1-.jpg?1514134396&s=362d7566116ed80c2f6c979b5dbb2775',
-            title: 'Travel Images',
-            description:
-              'We have a great selection of travel images and travel pictures to choose from and download. Our travel photos consists of images taken by our photographers during travel photography shoots as well as images of means of travel like trains, planes, cars or hiking.',
+              'https://i.pinimg.com/originals/d0/a6/11/d0a611b3821115bb873be7b8d491d714.jpg',
+            title: 'Jisoo For InStyle Korea Magazine  ',
+            author: 'John Dam',
           },
         ]
       },
@@ -83,12 +76,56 @@ export default {
   },
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
 * {
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Open sans', sans-serif;
 }
-.name {
-  font-family: 'Dancing Script', cursive;
-  font-size: 55px;
+.carousel-post {
+  margin: auto;
+  background: #fff;
+  width: 70%;
+  min-height: 180px;
+  top: 50%;
+  left: 0;
+  position: relative;
+  transform: translateY(-50%);
+  border: 4px solid #333;
+  animation: title-shadow 0.5s 1;
+  box-shadow: 10px 10px black;
+  color: #111111;
+  h3 {
+    font-size: 48px;
+    font-family: 'Lora', sans-serif;
+    animation: post-title 0.5s 1;
+    opacity: 1;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+  b {
+    position: absolute;
+    top: 75%;
+    left: 46%;
+    font-size: 16px;
+    margin-bottom: 10px;
+    animation: post-author 0.6s 1;
+  }
+  @keyframes title-shadow {
+    0% {
+      box-shadow: 16px 16px black;
+    }
+  }
+  @keyframes post-title {
+    0% {
+      opacity: 0;
+      left: 80px;
+    }
+  }
+  @keyframes post-author {
+    0% {
+      left: 55%;
+      opacity: 0;
+    }
+  }
 }
 </style>

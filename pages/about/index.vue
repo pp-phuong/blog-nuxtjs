@@ -10,7 +10,7 @@
         dùng
       </p>
       <p style="color: black; font-size: 20px;">
-        3. Web server sẽ nhận request, đọc dữ liệu từ database.
+        3. Web server sẽ nhận request, đọc dữ liệu từ backend.
       </p>
       <p style="color: black; font-size: 20px;">
         4. Web server gửi dữ liệu JSON về browser
@@ -34,9 +34,7 @@ export default {}
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
+  font-family: 'Lora', serif;
   font-weight: 300;
   font-size: 100px;
   color: #35495e;

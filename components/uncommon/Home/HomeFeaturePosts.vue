@@ -23,6 +23,6 @@ export default {
 </script>
 <style scoped>
 * {
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 </style>

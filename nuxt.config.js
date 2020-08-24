@@ -29,12 +29,20 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;400&family=Dancing+Script:wght@700&display=swap',
+          'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=Open+Sans:ital,wght@0,300;0,400;1,400&display=swap',
       },
       {
         rel: 'stylesheet',
         href:
           'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+      },
+      {
+        href:
+          'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+        rel: 'stylesheet',
+        integrity:
+          'sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN',
+        crossorigin: 'anonymous',
       },
     ],
   },
@@ -60,6 +68,13 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/fontawesome',
   ],
+  fontawesome: {
+    component: 'fa',
+    icons: {
+      solid: true,
+      brands: true,
+    },
+  },
   /*
    ** Nuxt.js modules
    */
@@ -72,7 +87,7 @@ export default {
     icons: true,
   },
   axios: {
-    baseURL: 'https://5f3682c75b91f60016ca5b34.mockapi.io/api/v1/',
+    baseURL: 'https://5f3682c75b91f60016ca5b34.mockapi.io/api/v1/:endpoint',
   },
   /*
    ** Build configuration
