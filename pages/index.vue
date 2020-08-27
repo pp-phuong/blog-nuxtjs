@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-import { mapActions } from 'vuex'
+// import { mapActions } from 'vuex'
 import { blogActions } from '../constants/vuex'
 import {
   HomeHeader,
@@ -21,12 +21,9 @@ export default {
     HomeSidebar,
     HomeFeaturePosts,
   },
-  async fetch() {
-    await this.fetchBlogs()
+  async fetch({ store }) {
+    await store.dispatch(blogActions.FETCH.DATA)
   },
-  methods: mapActions({
-    fetchBlogs: blogActions.FETCH.DATA,
-  }),
 }
 </script>
 

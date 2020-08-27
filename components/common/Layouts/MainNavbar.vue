@@ -16,7 +16,7 @@
           :key="'home-header-carousel' + index"
           class="position-relative"
         >
-          <a :href="item" class="justify-content-center d-flex">{{
+          <a :href="nav.url" class="justify-content-center d-flex">{{
             nav.item
           }}</a>
         </li>
@@ -57,18 +57,23 @@ export default {
         return [
           {
             item: 'Home',
+            url: '/Home',
           },
           {
             item: 'About me',
+            url: '/Aboutme',
           },
           {
-            item: 'BLog',
+            item: 'BLogs',
+            url: '/Blogs',
           },
           {
             item: 'Categories',
+            url: '/Categories',
           },
           {
             item: 'Contact',
+            url: '/Contact',
           },
         ]
       },

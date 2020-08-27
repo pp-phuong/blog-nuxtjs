@@ -64,7 +64,7 @@
   line-height: 35px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.28s;
   outline: none;
   overflow: hidden;
   box-shadow: inset 0 0 0 0 white;

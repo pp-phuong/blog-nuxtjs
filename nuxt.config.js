@@ -29,7 +29,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=Open+Sans:ital,wght@0,300;0,400;1,400&display=swap',
+          'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=Open+Sans:ital,wght@0,300;0,400;1,400family=Roboto:wght@500&display=swap',
       },
       {
         rel: 'stylesheet',
@@ -87,7 +87,7 @@ export default {
     icons: true,
   },
   axios: {
-    baseURL: 'https://5f3682c75b91f60016ca5b34.mockapi.io/api/v1/:endpoint',
+    baseURL: 'https://5f3682c75b91f60016ca5b34.mockapi.io/api/v1',
   },
   /*
    ** Build configuration

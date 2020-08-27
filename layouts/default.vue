@@ -36,6 +36,7 @@ li {
 }
 img {
   transition: 0.35s all ease-in-out;
+  object-fit: cover;
 }
 img:hover {
   transform: scale(1.08);
