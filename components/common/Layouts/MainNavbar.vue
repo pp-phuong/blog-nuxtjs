@@ -57,23 +57,23 @@ export default {
         return [
           {
             item: 'Home',
-            url: '/Home',
+            url: '/home',
           },
           {
             item: 'About me',
-            url: '/Aboutme',
+            url: '/aboutme',
           },
           {
             item: 'BLogs',
-            url: '/Blogs',
+            url: '/blogs',
           },
           {
             item: 'Categories',
-            url: '/Categories',
+            url: '/categories',
           },
           {
             item: 'Contact',
-            url: '/Contact',
+            url: '/contact',
           },
         ]
       },

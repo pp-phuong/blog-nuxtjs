@@ -22,45 +22,58 @@
         <b-img center src="~/assets/image/sign.png" fluid alt="avata"></b-img>
       </div>
     </div>
+    <div class="mt-10">
+      <ListCategoryHome
+        v-for="(category, index) in categories"
+        :key="'category_' + index"
+        :category="category"
+      />
+    </div>
     <div class="mt-8 p-6" style="border: 1px solid #eaeaea;">
       <div rounded class="">
         <div class="d-flex flex-row justify-content-center">
           <hr width="35%" />
-          <small class="mr-2 ml-2">Trending</small>
+          <small class="mr-2 ml-2 font-weight-bold">Trending</small>
           <hr width="35%" />
         </div>
         <b-card
           no-body
-          class="overflow-hidden mb-2"
+          class="overflow-hidden"
           style="max-width: 540px; border: none;"
         >
-          <b-row no-gutters>
-            <b-col md="3">
-              <div class="overflow-hidden">
-                <b-img
-                  center
-                  src="https://1.bp.blogspot.com/-ZtpBuhhjExA/W900FQ-3QQI/AAAAAAAAHto/dlW0pSfj2to_rNBzuHObds2sozinWAh9gCLcBGAs/s1600/2017111723044B44%25281%2529.jpg"
-                  fluid
-                  alt="avata"
-                  class="pl-3"
-                ></b-img>
-              </div>
-            </b-col>
-            <b-col md="9">
-              <b-card-body class="text-left">
-                <h6 class="title-post-small">Why you should start Blogging</h6>
-                <a class="text-uppercase">
-                  Category
-                </a>
-              </b-card-body>
-            </b-col>
-          </b-row>
+          <ListBlogSidebar
+            v-for="(blog, index) in blogs"
+            :key="'blog-item-' + index"
+            :blog="blog"
+          />
+          <a href="/categories" class="m-auto font-weight-bold text-uppercase"
+            >Show more</a
+          >
         </b-card>
       </div>
     </div>
   </div>
 </template>
 
+<script>
+import { ListBlogSidebar, ListCategoryHome } from '~/components/common'
+export default {
+  components: {
+    ListBlogSidebar,
+    ListCategoryHome,
+  },
+  props: {
+    blogs: {
+      type: Array,
+      required: true,
+    },
+    categories: {
+      type: Array,
+      required: true,
+    },
+  },
+}
+</script>
 <style scoped>
 * {
   font-family: 'Open Sans', sans-serif;

@@ -8,9 +8,8 @@
     <ListBlogItem
       v-for="(blog, index) in blogs"
       :key="'blog-item-' + index"
-      :data="blog"
-    >
-    </ListBlogItem>
+      :blog="blog"
+    />
   </div>
 </template>
 <script>

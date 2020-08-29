@@ -6,7 +6,7 @@
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
               <b-nav-item>
-                <nuxt-link class="text-decoration-none text-light" to="/Home">
+                <nuxt-link class="text-decoration-none text-light" to="/home">
                   Home
                 </nuxt-link>
               </b-nav-item>
@@ -16,7 +16,7 @@
                 </nuxt-link>
               </b-nav-item>
               <b-nav-item>
-                <nuxt-link class="text-decoration-none text-light" to="/About">
+                <nuxt-link class="text-decoration-none text-light" to="/about">
                   About
                 </nuxt-link>
               </b-nav-item>

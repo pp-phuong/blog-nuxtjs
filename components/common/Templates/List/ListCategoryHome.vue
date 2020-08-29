@@ -1,6 +1,6 @@
 <template>
   <div
-    class="m-8 border-0 overflow-hidden text-center d-flex justify-content-center"
+    class="border-0 mb-3 overflow-hidden text-center d-flex justify-content-center"
   >
     <b-card
       overlay
@@ -9,10 +9,10 @@
       text-variant="white"
       fluid
       class="align-items-center position-relative d-flex justify-content-center"
-      style="height: 300px; object-fit: cover; width: 70%;"
+      style="height: 130px; object-fit: cover; width: 98%;"
     >
       <a
-        :href="'categories/' + category.id + '/blogs'"
+        :href="'category/' + category.id + '/blogs'"
         class="category-name font-weight-bold"
         >{{ category.title }}
       </a>
@@ -34,10 +34,12 @@ export default {
   font-family: 'Open Sans', sans-serif;
 }
 .category-name {
+  text-transform: uppercase;
+  color: #000;
   background: #fff;
   width: 70%;
   padding: 20px 30px;
-  font-size: 30px;
+  font-size: 10px;
   margin: auto;
   position: absolute;
   top: 30%;
