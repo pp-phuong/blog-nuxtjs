@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-row no-gutters class="p-0 m-0">
-      <b-col md="3">
+      <b-col md="4">
         <div class="overflow-hidden">
           <b-img
             center
@@ -12,11 +12,17 @@
           ></b-img>
         </div>
       </b-col>
-      <b-col md="9">
+      <b-col md="8">
         <b-card-body class="text-left pr-3 pl-1 pt-0">
-          <h6 class="title-post-small">{{ blog.title }}</h6>
+          <h6>
+            <a
+              :href="'/categories/' + blog.categoryId + '/blogs/' + blog.id"
+              class="title-post-small"
+              >{{ blog.title }}</a
+            >
+          </h6>
           <a class="text-uppercase">
-            {{ blog.createdAt }}
+            {{ blog.createdAt | formatDate }}
           </a>
         </b-card-body>
       </b-col>

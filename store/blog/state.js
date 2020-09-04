@@ -4,4 +4,7 @@ export default () => ({
     limit: 4,
   },
   data: [],
+  category: {},
+  post: {},
+  total: 0,
 })

@@ -21,30 +21,7 @@
           }}</a>
         </li>
       </ul>
-
-      <div class="box">
-        <a href="#popup-search" class="button"
-          ><fa :icon="['fas', 'search']"
-        /></a>
-        <div
-          id="popup-search"
-          class="overlay text-center align-items-center d-flex m-auto"
-        >
-          <div class="popup m-auto d-flex align-items-center position-relative">
-            <a
-              class="close font-weight-bold text-decoration-none position-absolute"
-              href="#"
-              >&times;</a
-            >
-            <input
-              type="text"
-              class="input-search-form m-10 text-light"
-              required
-              placeholder="Type to search"
-            />
-          </div>
-        </div>
-      </div>
+      <fa :icon="['fas', 'user']" />
     </div>
   </div>
 </template>
@@ -79,6 +56,11 @@ export default {
       },
     },
   },
+  data() {
+    return {
+      filterString: null,
+    }
+  },
 }
 </script>
 <style lang="scss" scoped>
@@ -112,45 +94,5 @@ li {
 .main-nav {
   border-top: 1px solid hsl(0, 1%, 85%);
   font-size: 14px;
-}
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(252, 250, 250, 0.89);
-  transition: all 500ms ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1000;
-  z-index: 10;
-}
-.popup {
-  background: #333;
-  width: 70%;
-  height: 40%;
-  transition: all 0.5s ease-in-out;
-}
-.popup .close {
-  top: 20px;
-  right: 30px;
-  font-size: 30px;
-  color: rgb(0, 0, 0);
-}
-.popup .close:hover {
-  color: rgb(131, 130, 130);
-}
-.input-search-form {
-  width: 90%;
-  background: inherit;
-  font-size: 30px;
-  outline: none;
-  height: 30%;
-  border: none;
-  border-bottom: 2px solid rgb(39, 44, 42);
 }
 </style>

@@ -1,27 +1,32 @@
 <template>
   <div>
     <div class="mt-5 border-0 text-center">
-      <div class="overflow-hidden mb-4">
+      <div class="mb-4 overflow-hidden ml-2">
         <b-img
           center
           :src="blog.thumbnail"
           fluid
           :alt="blog.label"
-          style="height: 400px; object-fit: cover; width: 100%;"
+          style="max-height: 400px; object-fit: cover; width: 100%;"
         ></b-img>
       </div>
-      <a href="" class="info-post text-uppercase">
+      <!-- <a href="" class="info-post text-uppercase">
         {{ blog.categoryId }}
-      </a>
-      <h1 class="heading-title mb-3 font-weight-bold">
-        {{ blog.title }}
+      </a> -->
+      <h1>
+        <a
+          class="heading-title mb-3 font-weight-bold"
+          :href="'categories/' + blog.categoryId + '/blogs/' + blog.id"
+          >{{ blog.title }}</a
+        >
       </h1>
-      <a class="info-post mb-2">{{ blog.author }} {{ blog.createdAt }}</a>
+      <a class="info-post mb-2"
+        >{{ blog.author }} - {{ blog.createdAt | formatDate }}</a
+      >
       <p>
         {{ blog.description }}
+        {{ blog.details }}
       </p>
-      <a href=""> No commment </a>
-      <hr />
     </div>
   </div>
 </template>

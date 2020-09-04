@@ -12,7 +12,7 @@
       style="height: 130px; object-fit: cover; width: 98%;"
     >
       <a
-        :href="'category/' + category.id + '/blogs'"
+        :href="'categories/' + category.id + '/blogs'"
         class="category-name font-weight-bold"
         >{{ category.title }}
       </a>

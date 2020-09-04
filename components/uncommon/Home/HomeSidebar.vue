@@ -41,14 +41,17 @@
           class="overflow-hidden"
           style="max-width: 540px; border: none;"
         >
-          <ListBlogSidebar
+          <ListBlogSmall
             v-for="(blog, index) in blogs"
             :key="'blog-item-' + index"
             :blog="blog"
           />
-          <a href="/categories" class="m-auto font-weight-bold text-uppercase"
-            >Show more</a
+          <div
+            class="m-auto font-weight-bold text-uppercase"
+            @click="$emit('read-more-blog')"
           >
+            Show more
+          </div>
         </b-card>
       </div>
     </div>
@@ -56,10 +59,10 @@
 </template>
 
 <script>
-import { ListBlogSidebar, ListCategoryHome } from '~/components/common'
+import { ListBlogSmall, ListCategoryHome } from '~/components/common'
 export default {
   components: {
-    ListBlogSidebar,
+    ListBlogSmall,
     ListCategoryHome,
   },
   props: {
