@@ -20,4 +20,21 @@ export default {
     console.log(response.data)
     commit(blogMutations.SET.SINGLE_POST, response.data, { root: true })
   },
+  async updatePost({ commit }, data) {
+    const response = await this.$axios.put(
+      '/categories/' + data.params.category + '/blogs/' + data.params.blog,
+      data.item
+    )
+    console.log(response.data)
+    commit(blogMutations.SET.SINGLE_POST, response.data, { root: true })
+  },
+
+  async addNewPost({ commit }, data) {
+    const response = await this.$axios.post(
+      '/categories/' + data.item.categoryId + '/blogs/',
+      data.item
+    )
+    console.log(response.data)
+    commit(blogMutations.SET.DATA, response.data, { root: true })
+  },
 }

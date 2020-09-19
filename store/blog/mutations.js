@@ -1,6 +1,6 @@
 export default {
   SET_DATA(state, data) {
-    state.data = data
+    state.data = { ...state.data, ...data }
   },
   SET_QUERY(state, query) {
     state.query = { ...state.query, ...query }

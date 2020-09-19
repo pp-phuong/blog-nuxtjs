@@ -16,9 +16,15 @@
       <h1>
         <a
           class="heading-title mb-3 font-weight-bold"
-          :href="'categories/' + blog.categoryId + '/blogs/' + blog.id"
+          :href="'/categories/' + blog.categoryId + '/blogs/' + blog.id"
           >{{ blog.title }}</a
         >
+        <a
+          :href="
+            '/categories/' + blog.categoryId + '/blogs/' + blog.id + '/edit/'
+          "
+          ><b-icon icon="pencil-square" aria-hidden="true"></b-icon
+        ></a>
       </h1>
       <a class="info-post mb-2"
         >{{ blog.author }} - {{ blog.createdAt | formatDate }}</a

@@ -46,12 +46,12 @@
             :key="'blog-item-' + index"
             :blog="blog"
           />
-          <div
+          <a
             class="m-auto font-weight-bold text-uppercase"
-            @click="$emit('read-more-blog')"
+            href="/categories/1/blogs"
           >
             Show more
-          </div>
+          </a>
         </b-card>
       </div>
     </div>

@@ -52,6 +52,10 @@ export default {
             item: 'Contact',
             url: '/contact',
           },
+          {
+            item: 'New Blog',
+            url: '/newpost',
+          },
         ]
       },
     },

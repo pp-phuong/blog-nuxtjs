@@ -13,13 +13,23 @@
         </div>
       </b-col>
       <b-col md="8">
-        <b-card-body class="text-left pr-3 pl-1 pt-0">
+        <b-card-body class="text-left pr-3 pl-1 pr-1 pt-0">
           <h6>
             <a
               :href="'/categories/' + blog.categoryId + '/blogs/' + blog.id"
               class="title-post-small"
               >{{ blog.title }}</a
             >
+            <a
+              :href="
+                '/categories/' +
+                blog.categoryId +
+                '/blogs/' +
+                blog.id +
+                '/edit/'
+              "
+              ><b-icon icon="pencil-square" aria-hidden="true"></b-icon
+            ></a>
           </h6>
           <a class="text-uppercase">
             {{ blog.createdAt | formatDate }}

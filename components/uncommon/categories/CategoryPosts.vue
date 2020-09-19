@@ -8,6 +8,11 @@
       :per-page="perPage"
       :current-page="currentPage"
     />
+    <div>
+      <p v-if="blogs.length == 0" class="bg-primary p-3 text-dark">
+        Sorry, No Post Found !
+      </p>
+    </div>
     <div class="mt-3">
       <b-pagination
         :v-model="currentPage"

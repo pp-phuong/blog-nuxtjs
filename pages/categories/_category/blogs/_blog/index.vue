@@ -5,14 +5,13 @@
 </template>
 <script>
 import { mapState } from 'vuex'
-import { blogActions } from '../../../../constants/vuex'
+import { blogActions } from '~/constants/vuex'
 import { ListBlogItem } from '~/components/common'
 export default {
   components: {
     ListBlogItem,
   },
   async fetch({ store, params }) {
-    console.log(params)
     await store.dispatch(blogActions.FETCH.SINGLE_POST, params)
   },
   computed: {

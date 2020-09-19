@@ -7,10 +7,7 @@
           ><HomeFeaturePosts :blogs="blogs" top-blogs="topBlogs"
         /></b-col>
         <b-col xl="4" md="4" sm="12"
-          ><HomeSidebar
-            :blogs="blogs"
-            :categories="categories"
-            @read-more-blog="onReadMoreBlog"
+          ><HomeSidebar :blogs="blogs" :categories="categories"
         /></b-col>
       </b-row>
     </b-container>
